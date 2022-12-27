@@ -6,6 +6,16 @@ const countdown = document.getElementById('countdown');
 const year = document.getElementById('year');
 const loading = document.getElementById('loading');
 
+window.addEventListener('DOMContentLoaded', ()=>{
+    setTimeout(()=>{
+        loading.style.display = 'none'
+        // loading.style.opacity = '0'
+        // setTimeout(()=>{
+        // }, 500)
+    },2000)
+
+})
+
 
 const currentYear = new Date().getFullYear();
 console.log(currentYear)
@@ -34,9 +44,9 @@ function updateCountDown() {
     minutes.innerHTML = (m<10) ? '0' + m : m;
     seconds.innerHTML = (s<10) ? '0' + s : s;   
 }
-setTimeout(()=>{
-    loading.remove();
-    countdown.style.display = 'flex'
-},1000)
+// setTimeout(()=>{
+//     loading.remove();
+//     countdown.style.display = 'flex'
+// },1000)
 
 setInterval(updateCountDown,1000)
