@@ -46,7 +46,7 @@ h1{
   transform: translateX(-50%);
 }
 .countdown{
-  display: none;
+  display: flex;
   transform: scale(2);
 }
 .time{
@@ -59,6 +59,18 @@ h1{
 .time h2{
   margin: 0 0 5px;
 }
+/* loader */
+.loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media screen and (max-width:500px){
   h1{
